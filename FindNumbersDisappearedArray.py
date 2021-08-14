@@ -1,3 +1,8 @@
+# Top100LikedQuestions
+# n°448
+# Difficulty : easy
+
+#1st implementation
 class Solution(object):
     def findDisappearedNumbers(self, nums):
         """
@@ -15,7 +20,7 @@ class Solution(object):
         
         return nums
 		
-#set difference
+#2nd implementation : set difference
 class Solution(object):
     def findDisappearedNumbers(self, nums):
         """
