@@ -2,7 +2,7 @@
 # n°70
 # Difficulty : easy
 
-#Recursive
+#1st implementation : Recursive
 class Solution(object):
     def climbStairs(self, n):
         """
@@ -21,7 +21,7 @@ class Solution(object):
         return self.ComputeWays(currentStep + 1, finalStep) + self.ComputeWays(currentStep + 2, finalStep)
     
   
-#Memoization
+#2nd implementation : Memoization
 class Solution(object):
     def climbStairs(self, n):
         """
