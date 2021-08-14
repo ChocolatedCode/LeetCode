@@ -1,3 +1,7 @@
+# Top100LikedQuestions
+# n°155
+# Difficulty : easy
+
 class MinStack(object):
 
     def __init__(self):
