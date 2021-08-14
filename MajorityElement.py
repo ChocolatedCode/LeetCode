@@ -1,3 +1,7 @@
+# Top100LikedQuestions
+# n°169
+# Difficulty : easy
+
 class Solution(object):
     def majorityElement(self, nums):
         """
