@@ -1,10 +1,14 @@
+# Top100LikedQuestions
+# n°617
+# Difficulty : easy
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
-#Recursive
+#1st implementation : Recursive
 class Solution(object):
     def mergeTrees(self, root1, root2):
         """
