@@ -2,6 +2,7 @@
 # n°283
 # Difficulty : easy
 
+#1st implementation
 class Solution(object):
     def moveZeroes(self, nums):
         """
@@ -14,9 +15,9 @@ class Solution(object):
                 nums.remove(nums[i])
                 nums.append(0)
                 #print(nums)
-#faster than 11.72% of python online submissions				
+			
 				
-#Two pointers : 544ms, faster than 5.01% of python online submissions
+#2nd implementation 
 class Solution(object):
     def moveZeroes(self, nums):
         """
