@@ -2,7 +2,7 @@
 # n°121
 # Difficulty easy
 
-#2 nested loops
+#1st implementation : 2 nested loops
 class Solution(object):
     def maxProfit(self, prices):
         """
@@ -22,7 +22,7 @@ class Solution(object):
             return profit
 			
 
-#one for loop		
+#2nd implementation : one for loop		
 class Solution(object):
     def maxProfit(self, prices):
         """
@@ -42,7 +42,7 @@ class Solution(object):
             
         return profit
 
-#Divide and Conquer
+#3rd implementation : Divide and Conquer
 class Solution(object):
     def maxProfit(self, prices):
         """
