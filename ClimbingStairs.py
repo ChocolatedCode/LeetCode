@@ -1,3 +1,7 @@
+# Top100LikedQuestions
+# n°70
+# Difficulty : easy
+
 #Recursive
 class Solution(object):
     def climbStairs(self, n):
