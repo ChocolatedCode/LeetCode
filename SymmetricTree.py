@@ -1,3 +1,7 @@
+# Top100LikedQuestion
+# n°101
+# Difficulty : easy
+
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
@@ -5,7 +9,7 @@
 #         self.left = left
 #         self.right = right
 
-#Recursive O(n) time and O(n) space
+#1st implementation : Recursive O(n) time and O(n) space
 class Solution(object):
     def isSymmetric(self, root):
         """
