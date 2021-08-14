@@ -10,13 +10,13 @@ class Solution(object):
         :type l2: ListNode + sorted
         :rtype: ListNode
         """
-        #start case
+        #start case : check if one list is empty -> return the other one
         if l1 is None:
             return l2
         elif l2 is None:
             return l1
-        else:
-            if l1.val < l2.val:
+        else:#which node will be the first one 
+            if l1.val < l2.val: #node values comparison
                 myList = ListNode(l1.val)
                 head = myList #entire merged list
                 l1 = l1.next
@@ -25,7 +25,7 @@ class Solution(object):
                 head = myList
                 l2 = l2.next
                 
-            while l1 is not None and l2 is not None:
+            while l1 is not None and l2 is not None: #go through both list
                 print(l1,l2)
                 if l1.val < l2.val:
                     myList.next = ListNode(l1.val)
@@ -35,7 +35,10 @@ class Solution(object):
                     l2 = l2.next
                 #print(head)
                 myList = myList.next
+                
+                
             #add remaining elements
+            #first option : go through the remaining one 
             #while l1 is not None:
             #    myList.next = ListNode(l1.val)
             #    l1 = l1.next
@@ -43,14 +46,10 @@ class Solution(object):
             #while l2 is not None:
             #    myList.next = ListNode(l2.val)
             #    l2 = l2.next
-            #    myList = myList.next     
-            #optimisation
+            #    myList = myList.next
+            
+            #2 option : optimisation : add the entire remaining part of the remaining list
             myList.next = l1 if l2 is None else l2
 
-        #print('head :', head)   
+        
         return head
-        
-            
-        
-            
-        
