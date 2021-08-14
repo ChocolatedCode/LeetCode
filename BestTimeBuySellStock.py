@@ -1,3 +1,7 @@
+# Top100LikedQuestions
+# n°121
+# Difficulty easy
+
 #2 nested loops
 class Solution(object):
     def maxProfit(self, prices):
