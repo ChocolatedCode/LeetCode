@@ -2,16 +2,16 @@
 # n°121
 # Difficulty easy
 
-#1st implementation : 2 nested loops
+#1st implementation : 2 nested loops : 0(n^2) time
 class Solution(object):
     def maxProfit(self, prices):
         """
         :type prices: List[int]
         :rtype: int
         """
-        profit = -1000
-        for idxBuy in range(len(prices)):
-            for idxSell in range(idxBuy+1, len(prices)):
+        profit = -1000 #what we want to maximize 
+        for idxBuy in range(len(prices)): # O(n)
+            for idxSell in range(idxBuy+1, len(prices)): # O(n)
                 if prices[idxSell] - prices[idxBuy] > profit:
                     profit = prices[idxSell] - prices[idxBuy]
                 
@@ -19,8 +19,9 @@ class Solution(object):
         if profit < 0 :
             return 0
         else:
-            return profit
-			
+            return profit # O(1) space
+
+#--------------------------------------------------------------------#
 
 #2nd implementation : one for loop		
 class Solution(object):
@@ -29,11 +30,10 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
+        minBuy = prices[0] # O(1) space
+        profit = 0 #what we want to maximize
         
-        minBuy = prices[0]
-        profit = 0
-        
-        for p in prices[1:]:
+        for p in prices[1:]: # O(n) time
             if p<minBuy:
                 minBuy = p
             currentProfit =  p - minBuy 
@@ -42,21 +42,23 @@ class Solution(object):
             
         return profit
 
-#3rd implementation : Divide and Conquer
+#--------------------------------------------------------------------#
+
+#3rd implementation : Divide and Conquer O(logn) time 
 class Solution(object):
     def maxProfit(self, prices):
         """
         :type prices: List[int]
         :rtype: int
         """
-        print(prices)
+        # print(prices)
         return self.maxDC(prices, 0, len(prices))
-    
     
     def maxDC(self, subArr, start, end): #divide and conquer
         
         #print(start, end,end-start)
         
+	#base case
         if end-1 == start: #single number
             profit = 0
             #print('a', start, end)
@@ -86,7 +88,8 @@ class Solution(object):
             profit = 0
         #print('c', profit, start, end)  
         #print('here')
-        return profit
+	
+        return profit # O(1) space
 		
 		
 		
