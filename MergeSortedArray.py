@@ -17,8 +17,7 @@ class Solution(object):
             return nums1
         elif n == 0:
             return nums1
-        
-        
+                
         j = m-1 # idx for values for nums1 
         i = n-1 # idx to go through nums2
         k = m+n-1 # "add" new value in nums1
