@@ -1,5 +1,5 @@
 # Top100LikedQuestions
-# n°53
+# LeetCode n°53
 # Difficulty : easy
 
 #1st implementation : 2 nested loops 
