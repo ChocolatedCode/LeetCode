@@ -1,5 +1,5 @@
 # Top100LikedQuestions
-# n°136
+# leetCode n°136
 # Difficulty: easy
 
 class Solution(object):
