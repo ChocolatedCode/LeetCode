@@ -1,5 +1,5 @@
 # Top100LikedQuestions
-# n°94
+# leetCode n°94
 # Difficulty : easy
 
 
