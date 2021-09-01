@@ -1,5 +1,5 @@
 # Top100LikedQuestions
-# n°283
+# leetCode n°283
 # Difficulty : easy
 
 #1st implementation
