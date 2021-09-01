@@ -1,5 +1,5 @@
 # Top100LikedQuestions
-# n°2
+# leetCode n°2
 # Difficulty : medium
 
 # Definition for singly-linked list.
