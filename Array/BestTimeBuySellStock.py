@@ -1,5 +1,5 @@
 # Top100LikedQuestions
-# n°121
+# leetCode n°121
 # Difficulty easy
 
 #1st implementation : 2 nested loops : 0(n^2) time
