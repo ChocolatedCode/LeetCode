@@ -8,9 +8,10 @@ class Solution(object):
         :rtype: int
         """
         
-        wrd = dict()
+        wrd = dict() # to count the repetition of letters
         letters = ['b','a','l','o','n']
-        for ch in text: # O(N)
+        #create dict
+        for ch in text: # O(N) time
             if ch not in wrd and ch in letters:
                 wrd[ch] = 0
             if ch in letters:
@@ -18,6 +19,7 @@ class Solution(object):
             
         # print('my dict : ', wrd)
         
+        #requirements to have "balloon"
         if len(wrd) == 5:
             N = min(wrd.values())
             return min(N,wrd['l']/2,wrd['o']/2 )
