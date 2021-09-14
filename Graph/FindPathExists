@@ -1,0 +1,52 @@
+# leetCode n°1971
+# Difficulty : easy
+
+class Solution(object):
+    def validPath(self, n, edges, start, end):
+        """
+        :type n: int
+        :type edges: List[List[int]]
+        :type start: int
+        :type end: int
+        :rtype: bool
+        """
+        if len(edges) == 0:
+            return True
+        if len(edges) == 1:
+            if edges[0][0] == start and edges[0][1] == end:
+                return True
+        # Breadth-first search
+        #create adjacency list G = (V, E)
+        neighbours = dict()
+        for a,b in edges:
+            # print('a,b ', a,b)
+            if a not in neighbours:
+                #neighbours[a] = {}
+                neighbours.setdefault(a, [])
+            if b not in neighbours:
+                #neighbours[b] = {}
+                neighbours.setdefault(b, [])
+                
+            neighbours[a].append(b) # multiples neighbours
+            neighbours[b].append(a) # bidirectional
+        
+        # print('neigh :', neighbours)
+        N = len(edges) 
+        visited = []# other option : [False] * (N) but too slow
+        queue = [] # FIFO
+        queue.append(start) # initialize queue with s
+        visited.append(start)
+        
+        while queue != []:
+            currVtx = queue.pop()
+            # print('current vertex : ', currVtx)
+            for v in neighbours[currVtx]:
+                # print(v)
+                if v not in visited:
+                    visited.append(v) #or : visited[v] = True
+                    queue.append(v)
+                if v == end:
+                    return True
+        
+            
+               
