@@ -20,10 +20,3 @@ class DSU(object):
             self.par[yr] = xr
             self.rnk[xr] += 1
         return True
-
-class Solution(object):
-    def findRedundantConnection(self, edges):
-        dsu = DSU()
-        for edge in edges:
-            if not dsu.union(*edge):
-                return edge
