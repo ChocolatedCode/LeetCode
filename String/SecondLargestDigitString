@@ -1,0 +1,26 @@
+# leetCode n°1796
+# Difficulty : easy
+
+class Solution(object):
+    def secondHighest(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        
+        digits = []
+        for char in s:
+            if char.isdigit() :
+                if char not in digits:
+                    digits.append(char)
+            
+        
+        # print('digits : ', digits)
+        
+        if len(digits) > 1:
+            return sorted(digits)[-2]
+        return -1
+    
+# Runtime: 28 ms, faster than 79.05% of Python online submissions for Second Largest Digit in a String.
+# Memory Usage: 13.4 MB, less than 75.24% of Python online submissions for Second Largest Digit in a String.
+        
